@@ -1,0 +1,152 @@
+main {
+  display:grid;
+  grid-template-rows:repeat(2,auto);
+  grid-template-areas: "mainArea"
+                       "sideArea";
+
+  height:100%;
+  margin-left:10%;
+  margin-right: 10%;
+ }
+
+.main {
+  grid-area:mainArea;
+  height:100%;
+}
+.more {
+  grid-area:sideArea;
+}
+.books ul {
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+
+}
+
+.books ul .arrow {
+
+}
+
+.main h1 {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  color: #72A0C1;
+}
+
+.main .explanation {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5%;
+  color: #72A0C1;
+
+}
+.main ul .HG,.LS,.GF,.SB,.SC,.BM,.SA,.S,.G,.WWL,.CW,.FG,.AL,.D,.TM {
+  position: relative;
+}
+
+
+
+.main ul li {
+  text-decoration: none;
+  list-style: none;
+  margin:5%;
+  padding:10px;
+  background-color: #6CB4EE;
+  text-align: center;
+  color:white;
+  z-index:0;
+}
+.main ul a {
+  text-decoration: none;
+  color:white;
+}
+
+.popup{
+background-color: #B0C4DE;
+position: absolute;
+width:100%;
+top:0;
+padding: 20px;
+border: 2px solid black;
+border-radius: 5px;
+display: none;
+z-index:1;
+}
+.popup .popup-content a {
+  position: absolute;
+  top:0;
+  right:1%;
+  text-decoration: none;
+
+
+}
+.popup:target{
+  display: block;
+}
+
+.main ul li:hover{
+  background-color: #243342;
+}
+
+
+
+.more h1 {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  color: #72A0C1;
+}
+
+.more p {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5%;
+  color: #72A0C1;
+
+}
+
+ .booklist ul {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+}
+
+.bookList ul li {
+  text-decoration: none;
+  list-style: none;
+  margin:30px;
+  padding:10px;
+  background-color: #6CB4EE;
+  text-align: center;
+  color:white;
+}
+
+
+@media screen and (max-width:500px) {
+  .books ul {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+
+  }
+  .main ul li {
+   position: relative;
+   right:8%; }
+
+   .booklist ul {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+  }
+
+
+    .main {
+      z-index: 0;
+    }
+    .popup .popup-content a{
+     font-size: 10px;
+    }
+
+
+
+
+}
